@@ -11,7 +11,7 @@ A customizable React component that creates a beautiful GitHub portfolio display
 - TypeScript support
 - Loading states and error handling
 
-## Screenshot
+## Screenshots
 
 ![](/src/assets/screenshots/repo-light.png)
 ![](/src/assets/screenshots/repo-dark.png)
@@ -56,7 +56,7 @@ function App() {
 
 ### Styling
 
-The component uses Tailwind CSS classes for styling. You can customize the appearance by:
+The component uses Tailwind CSS for styling. You can customize the appearance by:
 
 1. Passing additional classes via the `className` prop
 2. Modifying the existing Tailwind classes in the component
