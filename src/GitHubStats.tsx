@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
+import { Button } from '@/components/ui/button';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 import { Github, GitFork, Star, Users, Sun, Moon } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 
 interface GitHubUser {
   login: string;
@@ -51,7 +51,6 @@ const GitHubStats: React.FC<GitHubStatsProps> = ({
   const [theme, setTheme] = useState<'light' | 'dark'>(defaultTheme);
 
   useEffect(() => {
-    // Apply theme to document
     document.documentElement.classList.remove('light', 'dark');
     document.documentElement.classList.add(theme);
   }, [theme]);
@@ -124,7 +123,6 @@ const GitHubStats: React.FC<GitHubStatsProps> = ({
           )}
         </Button>
       </div>
-
       <Card className="mb-6 dark:bg-gray-800">
         <CardHeader>
           <div className="flex items-center gap-4">
@@ -160,13 +158,11 @@ const GitHubStats: React.FC<GitHubStatsProps> = ({
           </div>
         </CardContent>
       </Card>
-
       <Tabs defaultValue="repos" className="w-full">
         <TabsList className="dark:bg-gray-800">
           <TabsTrigger value="repos" className="dark:text-gray-300">Repositories</TabsTrigger>
           <TabsTrigger value="stats" className="dark:text-gray-300">Statistics</TabsTrigger>
         </TabsList>
-
         <TabsContent value="repos">
           <div className="grid gap-4">
             {repos.map(repo => (
@@ -205,7 +201,6 @@ const GitHubStats: React.FC<GitHubStatsProps> = ({
             ))}
           </div>
         </TabsContent>
-
         <TabsContent value="stats">
           <Card className="dark:bg-gray-800">
             <CardHeader>
